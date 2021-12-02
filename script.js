@@ -1,4 +1,28 @@
-//Inicio con saludo
+/*let producto = document.createElement("div")
+producto.innerHTML = "<h2>Silla Nórdica</h2>";
+producto.innerHTML = "<p>Silla Nórdica<p>";
+document.body.appendChild(producto);*/
+
+const productos = [{ código: "SN",  nombre: "Silla Nordica", precio: 100, medidas: "Alto: 90cm, Ancho: 60cm, Largo: 60cm" },
+                  {  código: "SI",  nombre: "Silla Indutrial", precio: 120,  medidas: "Alto: 90cm, Ancho: 50cm, Largo: 60cm" },
+                  {  código: "SP",  nombre: "Silla de Pino" , precio: 80, medidas: "Alto: 80cm, Ancho: 50cm, Largo: 50cm"},
+                  {  código: "MR",  nombre: "Mesa Comedor Nórdica"  , precio: 250, medidas: "Alto: 80cm, Ancho: 80cm, Largo: 120cm"},
+                  {  código: "MI",  nombre: "Mesa Industrial" , precio: 270, medidas: "Alto: 80cm, Ancho: 80cm, Largo: 140cm"},
+                  {  código: "MP",  nombre: "Mesa de Pino" , precio: 230, medidas: "Alto: 80cm, Ancho: 80cm, Largo: 120cm"}];
+
+for (const producto of productos) {
+    let contenedor = document.createElement("div");
+    //Definimos el innerHTML del elemento con una plantilla de texto
+    contenedor.innerHTML = `<h3> ${producto.nombre}</h3>
+                            <p>  Código: ${producto.código}</p>
+                            <p>  Medidas: ${producto.medidas}</p>
+                            <b> Precio: $ ${producto.precio}</b>
+                            <p><a href="">Comprar</a></p>`;
+    document.body.appendChild(contenedor);
+}
+
+
+/*Inicio con saludo
 alert("Bienvenido a Muebles E-Commerce");
 
 
@@ -45,10 +69,10 @@ alert ("Se suma el IVA y el total es de " + costoTotal)
 let descuentoCupon20OFF = costoTotal * 20/100
 let costoFinal = costoTotal - descuentoCupon20OFF
 
-alert ("Se aplica cupón 20%OFF en su compra y queda en " + costoFinal)
+alert ("Se aplica cupón 20%OFF en su compra y queda en " + costoFinal)*/
 
 
-//Stock de productos
+/*//Stock de productos
 class producto {
     constructor(codigo, nombre, moneda, precio, color, marca){
         this.codigo = codigo;
@@ -57,9 +81,6 @@ class producto {
         this.precio = parseFloat(precio);
         this.color = color;
         this.marca = marca;
-    }
-    sumaIva(){
-        this.precio = this.precio * 1.21;
     }
 }
 
@@ -93,4 +114,4 @@ productos.sort((a, b) => {
 });
 
 //Se imprime por Console
-console.log(productos)
+console.log(productos)*/
