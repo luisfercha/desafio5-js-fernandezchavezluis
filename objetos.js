@@ -12,7 +12,9 @@ for (const producto of productos) {
                             <p>  Código: ${producto.código}</p>
                             <p>  Medidas: ${producto.medidas}</p>
                             <b> Precio: $ ${producto.precio}</b>
-                            <p><a href="">Comprar</a></p>`;
+                            <button id="botonComprar">Comprar</button>`;
     document.body.appendChild(contenedor);
 }
+
+
 
